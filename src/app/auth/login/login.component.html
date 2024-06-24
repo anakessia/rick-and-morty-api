@@ -1,0 +1,24 @@
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="row justify-content-center w-100">
+    <div class="col-md-4">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body text-center">
+          <img src="assets/rick-and-morty-login.png" alt="Login Image" class="img-fluid login-image mb-3" />
+          <h5 class="card-title mb-3">Welcome</h5>
+          <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+          <form (ngSubmit)="login()">
+            <div class="form-group mb-3">
+              <input type="text" id="username" placeholder="E-mail" [(ngModel)]="username" name="username" class="form-control" required>
+            </div>
+            <div class="form-group mb-3">
+              <input type="password" id="password" placeholder="Password" [(ngModel)]="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn custom-login-button btn-block">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
