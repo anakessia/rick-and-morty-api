@@ -12,6 +12,7 @@ import { AuthService } from '../auth.service';
   imports: [CommonModule, FormsModule]
 })
 export class LoginComponent {
+  name: string = '';
   username: string = '';
   password: string = '';
   errorMessage: string = '';
@@ -19,7 +20,7 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   login(): void {
-    if (this.authService.login(this.username, this.password)) {
+    if (this.authService.login(this.username, this.password, this.name)) {
       this.router.navigate(['/dashboard']);
     } else {
       this.errorMessage = 'Invalid username or password';
