@@ -59,5 +59,10 @@ ng serve
 Abra o seu navegador e acesse http://localhost:4200/ para visualizar o projeto em execução.
 <hr>
 
+# Contribuição
+<p>Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.</p>
+
+<p>Feito por Ana Kessia</p>
+
 
 
