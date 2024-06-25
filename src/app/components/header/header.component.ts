@@ -11,13 +11,17 @@ import { AuthService } from '../../auth/auth.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   loggedInUserName: string | null = null;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.loggedInUserName = this.authService.getLoggedInUserName();
+  }
+
+  goToProfile(): void {
+    this.router.navigate(['/profile']);
   }
 
   logout(): void {

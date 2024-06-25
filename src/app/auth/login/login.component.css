@@ -8,3 +8,7 @@
     border-color: #2d5d31;
     color: #0e0d0d;
 }
+
+.custom-shadow {
+    box-shadow: 0 0.5rem 1rem rgba(50, 146, 74, 0.25);
+}

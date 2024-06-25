@@ -1,1 +1,28 @@
 <app-header></app-header>
+
+<div class="mt-4">
+  <app-search-bar (filterChange)="onFilterChange($event)"></app-search-bar>
+</div>
+
+<div class="container mt-4" infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="1.5" [infiniteScrollThrottle]="150" (scrolled)="loadMore()">
+  <div class="row">
+    <div class="col-md-3 mb-4" *ngFor="let character of filteredCharacters">
+      <div class="card">
+        <img class="card-img-top" [src]="character.image" alt="{{ character.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ character.name }}</h5>
+          <p class="card-text">{{ character.status }} - {{ character.species }}</p>
+          <button (click)="redirectToDetails(character.id)" class="btn btn-detail">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-center mt-4" *ngIf="filteredCharacters.length === 0 && searchTerm.length > 0">
+    No characters found matching "{{ searchTerm }}"
+  </div>
+
+  <div class="text-center mt-4" *ngIf="loading">
+    Loading more characters...
+  </div>
+</div>

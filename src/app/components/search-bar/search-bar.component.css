@@ -1,0 +1,8 @@
+.custom-input {
+    width: 30%;
+}
+
+.custom-input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(113, 213, 113, 0.25);
+}

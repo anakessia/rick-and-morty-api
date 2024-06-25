@@ -1,0 +1,46 @@
+.profile-page {
+    margin-top: 80px;
+
+}
+
+.btn-back {
+    background-color: #24472b;
+}
+
+.btn-back:hover {
+    background-color: #24472b;
+}
+
+.custom-icon {
+  color: #fff;
+}
+
+.card {
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(50, 146, 74, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    font-size: 20px;
+    color: rgb(52, 102, 72);
+    font-weight: 600;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}

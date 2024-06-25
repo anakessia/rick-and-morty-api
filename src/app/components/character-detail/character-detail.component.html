@@ -1,1 +1,41 @@
-<p>character-detail works!</p>
+<app-header></app-header>
+
+<div class="section-container mb-4">
+  <div class="container mt-4">
+    <button class="btn btn-back mt-4" (click)="goBack()">
+      <i class="bi bi-arrow-left custom-icon"></i>
+    </button>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div *ngIf="character" class="card flex-row">
+          <img class="card-img-left img-fluid" [src]="character.image" alt="{{ character.name }}" style="width: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{ character.name }}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>Status: </b>{{ character.status }} - {{ character.species }}</li>
+              <li class="list-group-item"><b>Species: </b>{{ character.species }}</li>
+              <li class="list-group-item"><b>Gender: </b>{{ character.gender }}</li>
+              <li class="list-group-item"><b>Origin: </b>{{ character.origin.name }}</li>
+              <li class="list-group-item"><b>Location: </b>{{ character.location.name }}</li>
+            </ul>
+          </div>
+        </div>
+
+       
+        <div *ngIf="episodes.length > 0" class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Episodes</h5>
+            <ul class="list-group list-group-flush">
+              <li *ngFor="let episode of episodes" class="list-group-item">
+                {{ episode.name }} ({{ episode.episode }})
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="loading" class="text-center">
+      <p>Loading character details...</p>
+    </div>
+  </div>
+</div>

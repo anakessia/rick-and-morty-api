@@ -1,0 +1,15 @@
+.section-container {
+    margin-top: 80px;
+}
+
+.btn-back {
+    background-color: #24472b;
+}
+
+.btn-back:hover {
+    background-color: #24472b;
+}
+
+.custom-icon {
+  color: #fff;
+}
